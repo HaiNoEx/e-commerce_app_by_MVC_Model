@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Runtime.CompilerServices;
 
 namespace BulkyWeb.Models
 {
@@ -16,6 +17,8 @@ namespace BulkyWeb.Models
         public int? CompanyId { get; set; }
         [ForeignKey("CompanyId")]
         [ValidateNever] 
-        public Company Company { get; set; }
+        public Company? Company { get; set; }
+        [NotMapped]
+        public string Role { get; set; } 
     }
 }
