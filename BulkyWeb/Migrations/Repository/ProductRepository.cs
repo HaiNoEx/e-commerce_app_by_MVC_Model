@@ -29,10 +29,11 @@ namespace BulkyWeb.Migrations.Repository
 				objFromDb.Price50 = obj.Price50;
 				objFromDb.Price100 = obj.Price100;
 				objFromDb.Author = obj.Author;
-				if(obj.ImageUrl != null)
-				{
-					objFromDb.ImageUrl = obj.ImageUrl;
-				}
+				objFromDb.ProductImages = obj.ProductImages;
+				//if(obj.ImageUrl != null)
+				//{
+				//	objFromDb.ImageUrl = obj.ImageUrl;
+				//}
 			}
 		}
 	}
