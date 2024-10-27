@@ -65,7 +65,7 @@
 
 						<div class="form-floating py-2 col-12">
 							<select asp-for="@Model.Product.CategoryId" asp-items="@Model.CategoryList" class="form-select border-0 shadow">
-								<option disabled selected>--Select Category--</option>
+								<option disabled selected>--Chọn danh mục--</option>
 							</select>
 							<label asp-for="Product.CategoryId" class="ms-2"></label>
 							<span asp-validation-for="Product.CategoryId" class="text-danger"></span>
@@ -81,16 +81,16 @@
 							<div class="col-6 col-md-3">
 								@if (Model.Product.Id != 0)
 								{
-									<button type="submit" class="btn btn-primary form-control">Update</button>
+									<button type="submit" class="btn btn-primary form-control">Cập nhật</button>
 								}
 								else
 								{
-									<button type="submit" class="btn btn-primary form-control">Create</button>
+									<button type="submit" class="btn btn-primary form-control">Tạo mới</button>
 								}
 
 							</div>
 							<div class="col-6 col-md-3">
-								<a asp-controller="Product" asp-action="Index" class="btn btn-outline-primary border form-control">Back to List</a>
+								<a asp-controller="Product" asp-action="Index" class="btn btn-outline-primary border form-control">Quay lại</a>
 							</div>
 						</div>
 					</div>
@@ -103,7 +103,7 @@
 							<div class="border p-1 m-2 text-center">
 								<img src="@image.ImageUrl" width="100%" style="border-radius:5px; border: 1px solid #bbb9b9;" />
 								<a asp-action="DeleteImage" class="btn btn-danger" asp-route-imageId="@image.Id">
-									<i class="bi bi-trash-fill"></i> Delete
+									<i class="bi bi-trash-fill"></i> Xóa
 								</a>
 							</div>
 
@@ -120,8 +120,8 @@
 	<script>
 		tinymce.init({
 			selector: 'textarea',
-			plugins: 'anchor autolink charmap codesample emoticons image lists table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed linkchecker a11ychecker tinymcespellchecker permanentpen powerpaste advtable advcode editimage advtemplate ai mentions tinycomments tableofcontents footnotes mergetags autocorrect typography inlinecss markdown',
-			toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough  | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent',
+			plugins: '',
+			toolbar: 'undo redo | bold italic underline strikethrough  | checklist numlist bullist ',
 			tinycomments_mode: 'embedded',
 			tinycomments_author: 'Author name',
 			mergetags_list: [

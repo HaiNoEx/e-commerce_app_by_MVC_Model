@@ -8,10 +8,10 @@ namespace BulkyWeb.Models
         [Key]
         public int Id { get; set; }
         [Required]
-		[DisplayName("Category Name")]
+		[DisplayName("Tên danh mục")]
         [MaxLength(30)]
 		public string Name { get; set; }
-        [DisplayName("Display Order")]
+        [DisplayName("Thứ tự hiển thị")]
         [Range(1, 100, ErrorMessage ="Range 1-100")]
         public int DisplayOrder { get; set; }
     }

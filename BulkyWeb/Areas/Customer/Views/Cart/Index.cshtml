@@ -6,7 +6,7 @@
             <div class="row px-4">
                 <div class="col-6">
                     <h5 class="pt-2 text-white">
-                        Shopping Cart
+                        Giỏ hàng
                     </h5>
                 </div>
 
@@ -17,7 +17,7 @@
             </div>
             <div class="row mb-3 pb-3">
                 <div class="col-md-2 offset-md-1">
-                    <a asp-area="Customer" asp-controller="Home" asp-action="Index" class="btn btn-outline-primary text-uppercase mb-5 btn-sm"><small>Continue Shopping</small></a>
+                    <a asp-area="Customer" asp-controller="Home" asp-action="Index" class="btn btn-outline-primary text-uppercase mb-5 btn-sm"><small>Tiếp tục mua sắm</small></a>
                 </div>
                 <div class="col-md-10 offset-md-1">
 
@@ -74,7 +74,7 @@
                     <div class="col-md-4 offset-md-4">
                         <ul class="list-group mb-4">
                             <li class="d-flex justify-content-between align-items-center">
-                                <h5 class="text-dark fw-semibold text-uppercase"> Total (USD)</h5>
+                                <h5 class="text-dark fw-semibold text-uppercase"> Tổng giá trị (VND)</h5>
                                 <h4 class="text-dark fw-bolder">@Model.OrderHeader.OrderTotal.ToString("c")</h4>
                             </li>
                         </ul>
@@ -82,7 +82,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-2 offset-md-5">
-                        <a asp-action="Summary" class="btn btn-primary border-0 bg-gradient w-100 py-2">Summary</a>
+                        <a asp-action="Summary" class="btn btn-primary border-0 bg-gradient w-100 py-2">Tổng kết hóa đơn</a>
                     </div>
                 </div>
             </div>

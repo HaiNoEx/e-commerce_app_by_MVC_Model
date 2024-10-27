@@ -59,7 +59,7 @@ namespace BulkyWeb.DbInitializer
                     State = "East Laos",
                     PostalCode = "12345",
                     City = "Thu Do Gio Ngan"
-                }, "Hai12345").GetAwaiter().GetResult();
+                }, "Hai12345@").GetAwaiter().GetResult();
 
                 ApplicationUser user = _db.ApplicationUsers.FirstOrDefault(u => u.Email == "admin@test.com");
                 _userManager.AddToRoleAsync(user, SD.Role_Admin).GetAwaiter().GetResult();

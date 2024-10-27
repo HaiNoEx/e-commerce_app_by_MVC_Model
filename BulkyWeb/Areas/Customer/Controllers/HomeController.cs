@@ -1,6 +1,7 @@
 using BulkyWeb.Migrations.Repository;
 using BulkyWeb.Migrations.Repository.IRepository;
 using BulkyWeb.Models;
+using BulkyWeb.Models.ViewModels;
 using BulkyWeb.Utility;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -14,8 +15,8 @@ namespace BulkyWeb.Areas.Customer.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly IUnitOfWork _unitOfWork;
-
-        public HomeController(ILogger<HomeController> logger, IUnitOfWork unitOfWork)
+		public ShoppingCartVM ShoppingCartVM { get; set; }
+		public HomeController(ILogger<HomeController> logger, IUnitOfWork unitOfWork)
         {
             _logger = logger;
             _unitOfWork = unitOfWork;
@@ -73,6 +74,7 @@ namespace BulkyWeb.Areas.Customer.Controllers
 
             return RedirectToAction(nameof(Index));
         }
+
 
         public IActionResult Privacy()
         {

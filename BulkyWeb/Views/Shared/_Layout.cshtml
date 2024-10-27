@@ -19,10 +19,10 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-primary border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-danger border-bottom box-shadow mb-3">
             <div class="container-fluid">
                 <a class="navbar-brand"  asp-controller="Home" asp-action="Index">
-                    <img src="/images/book.png" style="width:30px"/>
+                    <img src="/images/logo.png" style="width:30px"/>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -35,29 +35,29 @@
                             <a class="nav-link" asp-area="Customer" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="Admin" asp-controller="Order" asp-action="Index">Manage Order</a>
+                            <a class="nav-link" asp-area="Admin" asp-controller="Order" asp-action="Index">Quản lí đơn hàng</a>
                         </li>
                          @if(User.IsInRole(SD.Role_Admin)){ 
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Content Magagement
+                                    Quản lý
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item">
-                                        <a class="dropdown-item" asp-area="Admin" asp-controller="Category" asp-action="Index">Category</a>
+                                        <a class="dropdown-item" asp-area="Admin" asp-controller="Category" asp-action="Index">Danh mục</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="dropdown-item" asp-area="Admin" asp-controller="Product" asp-action="Index">Product</a>
+                                        <a class="dropdown-item" asp-area="Admin" asp-controller="Product" asp-action="Index">Sản phẩm</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="dropdown-item" asp-area="Admin" asp-controller="Company" asp-action="Index">Company</a>
+                                        <a class="dropdown-item" asp-area="Admin" asp-controller="Company" asp-action="Index">Công ty</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="dropdown-item" asp-area="Identity" asp-page="/Account/Register" >Create User</a>
+                                        <a class="dropdown-item" asp-area="Identity" asp-page="/Account/Register" >Tạo người dùng</a>
                                     </li>
                                     <li><hr class="dropdown-divider"></li>
                                     <li class="nav-item">
-                                        <a class="dropdown-item" asp-area="Admin" asp-controller="User" asp-action="Index">Manage User</a>
+                                        <a class="dropdown-item" asp-area="Admin" asp-controller="User" asp-action="Index">Quản lí người dùng</a>
                                     </li>
                                 </ul>
                             </li>
@@ -84,9 +84,9 @@
         </main>
     </div>
 
-    <footer class="border-top bg-primary footer text-muted">
+    <footer class="border-top bg-danger footer text-muted">
         <div class="container text-center">
-            Hai <i class="bi bi-bag-heart-fill"></i>
+            <i class="bi bi-bag-heart-fill"></i>
         </div>
     </footer>
 

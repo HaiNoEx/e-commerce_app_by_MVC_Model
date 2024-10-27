@@ -5,21 +5,21 @@
 	<div class="card-header bg-secondary bg-gradient ml-0 py-3">
 		<div class="row">
 			<div class="col-12 text-center">
-				<h2 class="text-white py-2">Category</h2>
+				<h2 class="text-white py-2">Danh mục</h2>
 			</div>
 		</div>
 	</div>
 	<div class="card-body p-4">
 		<div class="row pb-3">
 			<div class="col-6 text-end">
-				<a asp-controller="Category" asp-action="Create" class="btn btn-primary"><i class="bi bi-plus-square"></i> Create New Category</a>
+				<a asp-controller="Category" asp-action="Create" class="btn btn-primary"><i class="bi bi-plus-square"></i>Tạo danh mục mới</a>
 			</div>
 		</div>
 		<table class="table table-bordered table-striped">
 			<thead>
 				<tr>
-					<th>Category Name</th>
-					<th>Display Order</th>
+					<th>Tên danh mục</th>
+					<th>Thứ tự hiển thị</th>
 					<th></th>
 				</tr>
 			</thead>
@@ -31,10 +31,10 @@
 						<td>@obj.DisplayOrder</td>
 						<td class="w-75 btn-group" role="group">
 							<a asp-controller="Category" asp-action="Edit" asp-route-id="@obj.Id" class="btn btn-primary mx-2">
-								<i class="bi bi-pencil-square"></i> Edit
+								<i class="bi bi-pencil-square"></i> Chỉnh sửa
 							</a>
 							<a asp-controller="Category" asp-action="Delete" asp-route-id="@obj.Id" class="btn btn-danger mx-2">
-								<i class="bi bi-trash-fill"></i> Delete
+								<i class="bi bi-trash-fill"></i> Xóa
 							</a>
 						</td>
 					</tr>
